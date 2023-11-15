@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Solvd_Java.iml" filepath="$PROJECT_DIR$/Solvd_Java.iml" />
+      <module fileurl="file://$PROJECT_DIR$/com.solvd.laba.block1/Task2_ComputerService/Task2_ComputerService.iml" filepath="$PROJECT_DIR$/com.solvd.laba.block1/Task2_ComputerService/Task2_ComputerService.iml" />
+    </modules>
+  </component>
+</project>

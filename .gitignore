@@ -1,6 +1,5 @@
-
 .idea
-Solvd_Java.iml
+/Solvd_Java.iml
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/

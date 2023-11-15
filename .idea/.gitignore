@@ -1,3 +1,7 @@
+/out
+/.idea
+solvd_java.iml
+/app.log
 # Default ignored files
 /shelf/
 /workspace.xml

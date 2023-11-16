@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/Solvd_Java.iml" filepath="$PROJECT_DIR$/Solvd_Java.iml" />
-      <module fileurl="file://$PROJECT_DIR$/com.solvd.laba.block1/Task2_ComputerService/Task2_ComputerService.iml" filepath="$PROJECT_DIR$/com.solvd.laba.block1/Task2_ComputerService/Task2_ComputerService.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/.idea/solvd_java.iml" filepath="$PROJECT_DIR$/.idea/solvd_java.iml" />
->>>>>>> 01d1657189ffaebf0e77814d564f753aa97dc485
     </modules>
   </component>
 </project>

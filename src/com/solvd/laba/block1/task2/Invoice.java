@@ -46,7 +46,9 @@ public class Invoice {
     }
 
     public static String getBill() {
-        return "Your Invoice= " + invoice.amount + invoice.currency + invoice.address;
+        return "Your Invoice= " + invoice.amount
+                                + invoice.currency
+                                + invoice.address;
     }
 
 }

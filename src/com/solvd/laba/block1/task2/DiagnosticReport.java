@@ -12,6 +12,7 @@ public class DiagnosticReport {
     }
 
     public String getIssue() {
+
         return this.issue;
     }
 
@@ -19,26 +20,34 @@ public class DiagnosticReport {
     }
 
     public void setIssue(String issue) {
+
         this.issue = issue;
     }
 
     public String getDiagnosis() {
+
         return this.diagnosis;
     }
 
     public void setDiagnosis(String diagnosis) {
+
         this.diagnosis = diagnosis;
     }
 
     public Double getRepairCost() {
+
         return this.repairCost;
     }
 
     public void setRepairCost(double repairCost) {
+
         this.repairCost = repairCost;
     }
 
     public String toString() {
-        return "DiagnosticReport = \nissue= " + this.issue + "\ndiagnosis= " + this.diagnosis + "\nrepairCost= " + this.repairCost;
+        return "DiagnosticReport = \nissue= " +
+                this.issue + "\ndiagnosis= " +
+                this.diagnosis + "\nrepairCost= " +
+                this.repairCost;
     }
 }

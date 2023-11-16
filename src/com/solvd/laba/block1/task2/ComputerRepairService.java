@@ -6,10 +6,11 @@ import java.util.Map;
 public class ComputerRepairService extends KumcuRepairService implements I_DiagnoseController, I_IssueController {
     private I_CustomerController ICustomerController;
     DiagnosticReport report = new DiagnosticReport();
-    Map<Integer, String> issues = new HashMap();
-    Map<String, Integer> diagnoseCostMap = new HashMap();
+    Map<Integer, String> issues = new HashMap<>();
+    Map<String, Integer> diagnoseCostMap = new HashMap<>();
 
     public ComputerRepairService() {
+
     }
 
     public int greetCustomer() {
@@ -22,6 +23,7 @@ public class ComputerRepairService extends KumcuRepairService implements I_Diagn
             default:
                 return option;
         }
+
     }
 
     public int issueWithDevice() {
@@ -30,7 +32,8 @@ public class ComputerRepairService extends KumcuRepairService implements I_Diagn
 
         int option;
         for (option = 1; option <= this.issues.keySet().size(); ++option) {
-            System.out.println("" + option + " " + (String) this.issues.get(option));
+            System.out.println("" + option + " " +
+                    this.issues.get(option));
         }
 
         option = this.scan.nextInt();
@@ -90,7 +93,6 @@ public class ComputerRepairService extends KumcuRepairService implements I_Diagn
     }
 
     public Customer getCustomer() {
-
         return this.ICustomerController.getCustomer();
     }
 

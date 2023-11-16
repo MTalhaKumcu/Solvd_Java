@@ -5,22 +5,26 @@ public class Main {
 
         try {
             Customer customer = Customer.getCustomerInput();
-            System.out.println(customer.toString());
+            System.out.println(customer);
         } catch (IllegalArgumentException e) {
             System.out.println("Input error: " + e.getMessage());
         }
+        Computer computer = Computer.getComputerInput();
+        System.out.println(computer);
+
         ComputerRepairService service = new ComputerRepairService();
         int decision = service.greetCustomer();
-        PaymentDepartment payment = new PaymentDepartment(service.report);
+
 
         if (decision == 1) {
+            PaymentDepartment payment = new PaymentDepartment(service.report);
             payment.greetCustomer();
-        }else if (Character.toUpperCase((char) decision) == 'Q'){
+
+        } else if (Character.toUpperCase((char) decision) == 'Q') {
             System.out.println("Goodbye Come again!");
-        }else {
+        } else {
             System.out.println("Continue with the selected option: " + decision);
         }
-
 
     }
 

@@ -5,12 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="edb9e351-3d0e-498e-9fee-a702910964a0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/I_ComputerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/Computer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/Computer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/ComputerRepairService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/ComputerRepairService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/DiagnosticReport.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/DiagnosticReport.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/PaymentDepartment.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/PaymentDepartment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/Computer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/Computer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/ComputerRepairService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/ComputerRepairService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/DiagnosticReport.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/DiagnosticReport.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/PaymentDepartment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/PaymentDepartment.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -42,13 +60,18 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\A101\Desktop\Solvd_Java\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.solvd.laba.block1.task2.Main" />
       <module name="Solvd_Java" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.solvd.laba.block1.task2.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -70,12 +93,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1700104016056</updated>
-      <workItem from="1700104017080" duration="15343000" />
+      <workItem from="1700104017080" duration="26500000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.util.NoSuchElementException" package="java.util" />
+          <option name="timeStamp" value="7" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="13" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

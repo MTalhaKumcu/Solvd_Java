@@ -6,7 +6,8 @@ public class PaymentDepartment extends KumcuRepairService {
 
     public PaymentDepartment(DiagnosticReport report) {
         this.amount = report.getRepairCost();
-        Invoice.setInvoice(report.getRepairCost(), " $", "100 St Miami");
+        Invoice.setInvoice(report.getRepairCost(),
+                   " $", "100 St Miami");
     }
 
     public double getAmount() {
@@ -18,6 +19,7 @@ public class PaymentDepartment extends KumcuRepairService {
 
         this.amount = amount;
     }
+
 
     public int greetCustomer() {
         System.out.println(Invoice.getBill());

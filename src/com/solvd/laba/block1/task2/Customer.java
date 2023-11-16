@@ -122,10 +122,17 @@ public class Customer implements I_CustomerController {
         return email;
     }
 
+
     private static String validateNumber(String number) {
 
         if (!number.matches("\\d+")) {
             throw new IllegalArgumentException("Number must only contain numbers");
+        }
+        if (number.length() != 9 ) {
+            throw new IllegalArgumentException("Invalid phone number length. It must contain exactly 9 digits.");
+        }
+        if (!number.matches("[1-9]\\d{8}")){
+            throw new IllegalArgumentException("Number does not start 0");
         }
         return number;
     }

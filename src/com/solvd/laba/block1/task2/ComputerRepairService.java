@@ -15,7 +15,7 @@ public class ComputerRepairService extends KumcuRepairService implements I_Diagn
     public int greetCustomer() {
         System.out.println("Welcome to our service. Please Select an option:");
         System.out.println("1 - Diagnose Problem  \nQ - Quit System");
-        int option = this.scan.nextInt();
+        int option = this.scan.next().charAt(0);
         switch (option) {
             case 1:
                 return this.issueWithDevice();
@@ -29,12 +29,12 @@ public class ComputerRepairService extends KumcuRepairService implements I_Diagn
         System.out.println("Please Select the Issue.");
 
         int option;
-        for(option = 1; option <= this.issues.keySet().size(); ++option) {
-            System.out.println("" + option + " " + (String)this.issues.get(option));
+        for (option = 1; option <= this.issues.keySet().size(); ++option) {
+            System.out.println("" + option + " " + (String) this.issues.get(option));
         }
 
         option = this.scan.nextInt();
-        String issue = (String)this.issues.get(option);
+        String issue = (String) this.issues.get(option);
         String diagnosis = this.getDiagnose(issue);
         double cost = this.getCost(diagnosis);
         this.report.setIssue(issue);
@@ -90,6 +90,7 @@ public class ComputerRepairService extends KumcuRepairService implements I_Diagn
     }
 
     public Customer getCustomer() {
+
         return this.ICustomerController.getCustomer();
     }
 

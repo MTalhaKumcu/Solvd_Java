@@ -9,6 +9,7 @@ public abstract class KumcuRepairService {
     protected Scanner scan;
 
     public KumcuRepairService() {
+
         this.scan = new Scanner(System.in);
     }
 
@@ -31,10 +32,12 @@ public abstract class KumcuRepairService {
     }
 
     public Customer getCustomer() {
+
         return this.customer;
     }
 
     public void setCustomer(Customer customer) {
+
         this.customer = customer;
     }
 

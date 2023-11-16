@@ -55,23 +55,23 @@ public class Customer implements I_CustomerController {
         int remainingEmailTries = MAX_TRIES;
         int remainingPhoneNumberTries = MAX_TRIES;
 
-        while (remainingNameTries > 0 ||
-                remainingEmailTries > 0 ||
-                remainingPhoneNumberTries > 0) {
+        while (remainingNameTries >= 1 ||
+                remainingEmailTries >= 1 ||
+                remainingPhoneNumberTries >= 1) {
 
             try {
-                if (remainingNameTries > 0) {
-                    System.out.println("Enter Customer Name:");
+                if (remainingNameTries >= 1) {
+                    System.out.println("Enter Customer Name Surname:");
                     name = validateName(ConsoleHelper.readLine());
                     remainingNameTries--;
                 }
                 if (
-                        remainingEmailTries > 0) {
+                        remainingEmailTries >= 1) {
                     System.out.println("Enter Customer Email:");
                     email = validateEmail(ConsoleHelper.readLine());
                     remainingEmailTries--;
                 }
-                if (remainingPhoneNumberTries > 0) {
+                if (remainingPhoneNumberTries >= 1) {
                     System.out.println("Enter Customer Phone Number:");
                     phoneNumber = validateNumber(ConsoleHelper.readLine());
                     remainingPhoneNumberTries--;
@@ -80,24 +80,28 @@ public class Customer implements I_CustomerController {
                 break;
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid input: " + e.getMessage());
-                if (remainingNameTries > 0) {
-                    System.out.println("You have " + --remainingNameTries +
-                            " attempts remaining for Name.");
+                if (e.getMessage().contains("Name")) {
+                    if (remainingNameTries >= 1) {
+                        System.out.println("You have " + remainingNameTries + " attempts remaining for Name Surname.");
+                        remainingNameTries--;
+                    }
+                } else if (e.getMessage().contains("Email")) {
+                    if (remainingEmailTries >= 1) {
+                        System.out.println("You have " + remainingEmailTries + " attempts remaining for Email.");
+                        remainingEmailTries--;
+                    }
+                } else if (e.getMessage().contains("Number")) {
+                    if (remainingPhoneNumberTries >= 1) {
+                        System.out.println("You have " + remainingPhoneNumberTries + " attempts remaining for Phone Number.");
+                        remainingPhoneNumberTries--;
+                    }
                 }
-                if (remainingEmailTries > 0) {
-                    System.out.println("You have " + --remainingEmailTries +
-                            " attempts remaining for Email.");
+                if (remainingNameTries == 0 ||
+                        remainingEmailTries == 0 ||
+                        remainingPhoneNumberTries == 0) {
+                    System.out.println("Too many invalid attempts. Exiting the application.");
+                    System.exit(1);
                 }
-                if (remainingPhoneNumberTries > 0) {
-                    System.out.println("You have " + --remainingPhoneNumberTries +
-                            " attempts remaining for Phone Number.");
-                }
-            }
-            if (remainingNameTries == 0 ||
-                    remainingEmailTries == 0 ||
-                    remainingPhoneNumberTries == 0) {
-                System.out.println("Too many invalid attempts. Exiting the application.");
-                System.exit(1);
             }
         }
         return new Customer(name, email, phoneNumber);
@@ -111,6 +115,7 @@ public class Customer implements I_CustomerController {
     }
 
     private static String validateEmail(String email) {
+
         if (!email.matches("[a-zA-Z0-9]+@gmail\\.com")) {
             throw new IllegalArgumentException("Invalid email format. Email must end with @gmail.com, Letters and Numbers");
         }
@@ -118,6 +123,7 @@ public class Customer implements I_CustomerController {
     }
 
     private static String validateNumber(String number) {
+
         if (!number.matches("\\d+")) {
             throw new IllegalArgumentException("Number must only contain numbers");
         }
@@ -140,3 +146,5 @@ public class Customer implements I_CustomerController {
                 "Phone Number: " + phoneNumber + "\n";
     }
 }
+
+

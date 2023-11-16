@@ -1,6 +1,6 @@
 package com.solvd.laba.block1.task2;
 
-public class PaymentDepartment extends KumcuRepairService{
+public class PaymentDepartment extends KumcuRepairService {
     private Invoice invoice;
     private double amount;
 
@@ -10,10 +10,12 @@ public class PaymentDepartment extends KumcuRepairService{
     }
 
     public double getAmount() {
+
         return this.amount;
     }
 
     public void setAmount(double amount) {
+
         this.amount = amount;
     }
 
@@ -24,10 +26,15 @@ public class PaymentDepartment extends KumcuRepairService{
         int option = this.scan.nextInt();
         switch (option) {
             case 1:
-                System.out.println("Please pay amount by cash: " + this.amount);
+                System.out.println("Please pay amount by cash: "
+                        + this.amount);
                 break;
             case 2:
-                System.out.println("Please pay amount by card: " + this.amount);
+                System.out.println("Please pay amount by card: "
+                        + this.amount);
+                break;
+            default:
+                System.out.println("Invalid payment option.");
         }
 
         return option;

@@ -2,6 +2,7 @@ package com.solvd.laba.block1.task2;
 
 public class Main {
     public static void main(String[] args) {
+
         try {
             Customer customer = Customer.getCustomerInput();
             System.out.println(customer.toString());
@@ -14,9 +15,13 @@ public class Main {
 
         if (decision == 1) {
             payment.greetCustomer();
+        }else if (Character.toUpperCase((char) decision) == 'Q'){
+            System.out.println("Goodbye Come again!");
+        }else {
+            System.out.println("Continue with the selected option: " + decision);
         }
 
-        System.out.println("Goodbye Come again!");
+
     }
 
 }

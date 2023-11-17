@@ -83,8 +83,8 @@ public class Computer implements IComputerController {
         if (year.length() != 4) {
             throw new IllegalArgumentException("Invalid Year length. It must contain exactly 4 digits.");
         }
-        if (year.startsWith("0")) {
-                throw new IllegalArgumentException("Year cannot start with 0.");
+        if (!year.startsWith("20")) {
+                throw new IllegalArgumentException("Year cannot start with 20.");
         }
 
         return year;

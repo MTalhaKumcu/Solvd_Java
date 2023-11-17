@@ -11,6 +11,7 @@ public abstract class KumcuRepairService {
     public KumcuRepairService() {
 
         this.scan = new Scanner(System.in);
+
     }
 
     public KumcuRepairService(Customer customer) {
@@ -24,7 +25,6 @@ public abstract class KumcuRepairService {
         this.report = report;
         this.payment = payment;
     }
-
     public abstract int greetCustomer();
 
     public void greetCustomer(Customer customer) {

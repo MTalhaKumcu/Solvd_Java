@@ -1,5 +1,4 @@
 Solvd_Java.iml
-.idea
 
 ### IntelliJ IDEA ###
 out/
@@ -32,8 +31,8 @@ bin/
 .DS_Store
 =======
 /out
-/.idea
-.idea/solvd_java.iml
+.idea
+.idea/Solvd_Java.iml
 /app.log
 # Default ignored files
 /shelf/

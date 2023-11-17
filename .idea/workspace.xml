@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edb9e351-3d0e-498e-9fee-a702910964a0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/Computer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/Computer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/ComputerRepairService.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Solvd_Java/com/solvd/laba/block1/task2/ComputerRepairService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/ComputerRepairService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/solvd/laba/block1/task2/ComputerRepairService.java" afterDir="false" />
-    </list>
+    <list default="true" id="edb9e351-3d0e-498e-9fee-a702910964a0" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +82,7 @@
       <updated>1700104016056</updated>
       <workItem from="1700104017080" duration="28404000" />
       <workItem from="1700174936002" duration="7000" />
-      <workItem from="1700178134202" duration="1178000" />
+      <workItem from="1700178134202" duration="1496000" />
     </task>
     <servers />
   </component>

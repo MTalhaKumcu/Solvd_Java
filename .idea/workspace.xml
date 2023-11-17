@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="edb9e351-3d0e-498e-9fee-a702910964a0" name="Changes" comment="" />
+    <list default="true" id="edb9e351-3d0e-498e-9fee-a702910964a0" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +61,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/A101/Desktop/Solvd_Java",
+    "last_opened_file_path": "C:/Users/A101/Desktop/Automation-Testing-Course",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,6 +76,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\A101\Desktop\Solvd_Java\src\main\java" />
+      <recent name="C:\Users\A101\Desktop\Solvd_Java\src\main" />
       <recent name="C:\Users\A101\Desktop\Solvd_Java\src" />
     </key>
   </component>
@@ -143,7 +148,7 @@
           <option name="timeStamp" value="13" />
         </breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/solvd/laba/block1/task2/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/com/solvd/laba/block1/task2/Main.java</url>
           <line>11</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>

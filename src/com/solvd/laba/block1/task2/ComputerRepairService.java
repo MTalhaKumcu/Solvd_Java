@@ -16,7 +16,7 @@ public class ComputerRepairService extends KumcuRepairService implements I_Diagn
     public int greetCustomer() {
         System.out.println("Welcome to our service. Please Select an option:");
         System.out.println("1 - Diagnose Problem  \nQ - Quit System");
-        int option = this.scan.next().charAt(0);
+        int option = this.scan.nextInt();
         switch (option) {
             case 1:
                 return this.issueWithDevice();
@@ -45,6 +45,7 @@ public class ComputerRepairService extends KumcuRepairService implements I_Diagn
         this.report.setDiagnosis(diagnosis);
         System.out.println(this.report);
         System.out.println("Please select an option");
+
         return this.scan.nextInt();
     }
 

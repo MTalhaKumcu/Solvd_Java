@@ -1,12 +1,12 @@
-package com.solvd.laba.block1.task2;
+package main.java.com.solvd.laba.block1.task2;
+
+import main.java.com.solvd.laba.block1.task2.ICustomerController;
 
 import java.util.Objects;
 import java.util.Scanner;
-import java.util.I_CustomerController;
 
-public class Customer implements I_CustomerController {package com.solvd.laba.block1.task2;
 
-import java.util.Scanner;
+public class Customer implements ICustomerController {
 
     public abstract class KumcuRepairService {
         private Customer customer;
@@ -173,10 +173,10 @@ import java.util.Scanner;
         if (!number.matches("\\d+")) {
             throw new IllegalArgumentException("Number must only contain numbers");
         }
-        if (number.length() != 9 ) {
+        if (number.length() != 9) {
             throw new IllegalArgumentException("Invalid phone number length. It must contain exactly 9 digits.");
         }
-        if (!number.matches("[1-9]\\d{8}")){
+        if (!number.matches("[1-9]\\d{8}")) {
             throw new IllegalArgumentException("Number does not start 0");
         }
         return number;

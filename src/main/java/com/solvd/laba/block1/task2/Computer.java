@@ -1,10 +1,10 @@
-package com.solvd.laba.block1.task2;
+package main.java.com.solvd.laba.block1.task2;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.I_ComputerController;
 
-public class Computer implements I_ComputerController {
+
+public class Computer implements IComputerController {
     private String brand;
     private String model;
     private String year;

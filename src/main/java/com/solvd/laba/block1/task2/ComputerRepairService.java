@@ -1,9 +1,11 @@
+package main.java.com.solvd.laba.block1.task2;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class ComputerRepairService extends KumcuRepairService implements I_DiagnoseController, I_IssueController {
+public class ComputerRepairService extends KumcuRepairService implements IDiagnoseController, IIssueController {
 
-    private I_CustomerController ICustomerController;
+    private ICustomerController ICustomerController;
     DiagnosticReport report = new DiagnosticReport();
     Map<Integer, String> issues = new HashMap<>();
     Map<String, Integer> diagnoseCostMap = new HashMap<>();
@@ -90,7 +92,7 @@ public class ComputerRepairService extends KumcuRepairService implements I_Diagn
         return cost;
     }
 
-    public ICustomer getCustomer() {
+    public Customer getCustomer() {
         return ICustomerController.getCustomer();
     }
 

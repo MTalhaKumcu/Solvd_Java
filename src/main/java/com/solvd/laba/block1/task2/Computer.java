@@ -1,5 +1,7 @@
 package main.java.com.solvd.laba.block1.task2;
 
+import main.java.com.solvd.laba.block1.task2.interfaces.IComputerController;
+
 import java.util.InputMismatchException;
 import java.util.Scanner;
 

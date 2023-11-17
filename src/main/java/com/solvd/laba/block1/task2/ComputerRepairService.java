@@ -1,11 +1,14 @@
 package main.java.com.solvd.laba.block1.task2;
 
+import main.java.com.solvd.laba.block1.task2.interfaces.IDiagnoseController;
+import main.java.com.solvd.laba.block1.task2.interfaces.IIssueController;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class ComputerRepairService extends KumcuRepairService implements IDiagnoseController, IIssueController {
 
-    private ICustomerController ICustomerController;
+    private main.java.com.solvd.laba.block1.task2.interfaces.ICustomerController ICustomerController;
     DiagnosticReport report = new DiagnosticReport();
     Map<Integer, String> issues = new HashMap<>();
     Map<String, Integer> diagnoseCostMap = new HashMap<>();

@@ -25,6 +25,7 @@ public abstract class KumcuRepairService {
         this.report = report;
         this.payment = payment;
     }
+
     public abstract int greetCustomer();
 
     public void greetCustomer(Customer customer) {

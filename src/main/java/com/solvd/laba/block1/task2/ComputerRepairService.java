@@ -1,14 +1,16 @@
 package main.java.com.solvd.laba.block1.task2;
 
+import main.java.com.solvd.laba.block1.task2.exceptions.ValueNotFoundException;
 import main.java.com.solvd.laba.block1.task2.interfaces.IDiagnoseController;
 import main.java.com.solvd.laba.block1.task2.interfaces.IIssueController;
+import main.java.com.solvd.laba.block1.task2.interfaces.ICustomerController;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class ComputerRepairService extends KumcuRepairService implements IDiagnoseController, IIssueController {
 
-    private main.java.com.solvd.laba.block1.task2.interfaces.ICustomerController ICustomerController;
+    private ICustomerController ICustomerController;
     DiagnosticReport report = new DiagnosticReport();
     Map<Integer, String> issues = new HashMap<>();
     Map<String, Integer> diagnoseCostMap = new HashMap<>();

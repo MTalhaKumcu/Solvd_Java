@@ -1,6 +1,6 @@
-package main.java.com.solvd.laba.block1.task2;
+package com.solvd.laba.block1.task2.block1.task2;
 
-import main.java.com.solvd.laba.block1.task2.interfaces.ICustomerController;
+import com.solvd.laba.block1.task2.block1.task2.interfaces.ICustomerController;
 
 import java.util.Scanner;
 

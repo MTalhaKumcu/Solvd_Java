@@ -1,19 +1,25 @@
-package main.java.com.solvd.laba.block1.task2;
+package com.solvd.laba.block1.task2.block1.task2;
 
-import main.java.com.solvd.laba.block1.task2.exceptions.ValueNotFoundException;
-import main.java.com.solvd.laba.block1.task2.interfaces.IDiagnoseController;
-import main.java.com.solvd.laba.block1.task2.interfaces.IIssueController;
-import main.java.com.solvd.laba.block1.task2.interfaces.ICustomerController;
+import com.solvd.laba.block1.task2.block1.task2.exceptions.ValueNotFoundException;
+import com.solvd.laba.block1.task2.block1.task2.interfaces.IDiagnoseController;
+import com.solvd.laba.block1.task2.block1.task2.interfaces.IIssueController;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class ComputerRepairService extends KumcuRepairService implements IDiagnoseController, IIssueController {
 
-    private ICustomerController ICustomerController;
+public class ComputerRepair extends KumcuRepairService implements IDiagnoseController, IIssueController {
+   private static final Logger logger = LogManager.getLogger(ComputerRepair.class);
+
+    private com.solvd.laba.block1.task2.block1.task2.interfaces.ICustomerController ICustomerController;
     DiagnosticReport report = new DiagnosticReport();
     Map<Integer, String> issues = new HashMap<>();
     Map<String, Integer> diagnoseCostMap = new HashMap<>();
+
+
 
     @Override
     public int greetCustomer() {

@@ -1,4 +1,4 @@
-package main.java.com.solvd.laba.block1.task2;
+package com.solvd.laba.block1.task2.block1.task2.Node;
 
 public class Main {
     public static void main(String[] args) {

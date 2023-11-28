@@ -4,9 +4,6 @@ import com.solvd.laba.block1.task2.block1.task2.exceptions.ValueNotFoundExceptio
 import com.solvd.laba.block1.task2.block1.task2.interfaces.IDiagnoseController;
 import com.solvd.laba.block1.task2.block1.task2.interfaces.IIssueController;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import java.util.HashMap;
 import java.util.Map;
 

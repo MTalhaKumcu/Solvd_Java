@@ -19,7 +19,7 @@ public class Main {
 
 
         if (decision == 1) {
-            PaymentDepartment payment = new PaymentDepartment(service.report());
+            PaymentDepartment payment = new PaymentDepartment(service.report);
             payment.greetCustomer();
 
         } else if (Character.toUpperCase((char) decision) == 'Q') {

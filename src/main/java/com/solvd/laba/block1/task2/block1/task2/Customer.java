@@ -1,5 +1,6 @@
 package com.solvd.laba.block1.task2.block1.task2;
 
+import com.solvd.laba.block1.task2.block1.task2.exceptions.CustomerValidationException;
 import com.solvd.laba.block1.task2.block1.task2.interfaces.ICustomerController;
 
 import java.util.Scanner;
@@ -57,9 +58,7 @@ public class Customer implements ICustomerController {
         int remainingEmailTries = MAX_TRIES;
         int remainingPhoneNumberTries = MAX_TRIES;
 
-        while (remainingNameTries >= 1 ||
-                remainingEmailTries >= 1 ||
-                remainingPhoneNumberTries >= 1) {
+        while (remainingNameTries >= 1 || remainingEmailTries >= 1 || remainingPhoneNumberTries >= 1) {
 
             try {
                 if (remainingNameTries >= 1) {
@@ -67,8 +66,7 @@ public class Customer implements ICustomerController {
                     name = validateName(ConsoleHelper.readLine());
                     remainingNameTries--;
                 }
-                if (
-                        remainingEmailTries >= 1) {
+                if (remainingEmailTries >= 1) {
                     System.out.println("Enter Customer Email:");
                     email = validateEmail(ConsoleHelper.readLine());
                     remainingEmailTries--;
@@ -80,6 +78,7 @@ public class Customer implements ICustomerController {
                 }
 
                 break;
+
             } catch (IllegalArgumentException e) {
                 System.out.println("Invalid input: " + e.getMessage());
                 if (e.getMessage().contains("Name")) {
@@ -98,9 +97,7 @@ public class Customer implements ICustomerController {
                         remainingPhoneNumberTries--;
                     }
                 }
-                if (remainingNameTries == 0 ||
-                        remainingEmailTries == 0 ||
-                        remainingPhoneNumberTries == 0) {
+                if (remainingNameTries == 0 || remainingEmailTries == 0 || remainingPhoneNumberTries == 0) {
                     System.out.println("Too many invalid attempts. Exiting the application.");
                     System.exit(1);
                 }
@@ -111,7 +108,7 @@ public class Customer implements ICustomerController {
 
     private static String validateName(String name) {
         if (name.matches(".*\\d.*")) {
-            throw new IllegalArgumentException("Name must only contain letters.");
+            throw new CustomerValidationException("Name must only contain letters.");
         }
         return name;
     }
@@ -119,7 +116,7 @@ public class Customer implements ICustomerController {
     private static String validateEmail(String email) {
 
         if (!email.matches("[a-zA-Z0-9]+@gmail\\.com")) {
-            throw new IllegalArgumentException("Invalid email format. Email must end with @gmail.com, Letters and Numbers");
+            throw new CustomerValidationException("Invalid email format. Email must end with @gmail.com, Letters and Numbers");
         }
         return email;
     }
@@ -128,13 +125,13 @@ public class Customer implements ICustomerController {
     private static String validateNumber(String number) {
 
         if (!number.matches("\\d+")) {
-            throw new IllegalArgumentException("Number must only contain numbers");
+            throw new CustomerValidationException("Number must only contain numbers");
         }
         if (number.length() != 9) {
-            throw new IllegalArgumentException("Invalid phone number length. It must contain exactly 9 digits.");
+            throw new CustomerValidationException("Invalid phone number length. It must contain exactly 9 digits.");
         }
         if (!number.matches("[1-9]\\d{8}")) {
-            throw new IllegalArgumentException("Number does not start 0");
+            throw new CustomerValidationException("Number does not start 0");
         }
         return number;
     }
@@ -149,10 +146,11 @@ public class Customer implements ICustomerController {
 
     @Override
     public String toString() {
-        return "Customer Information:\n" +
-                "Name: " + name + "\n" +
-                "Email: " + email + "\n" +
-                "Phone Number: " + phoneNumber + "\n";
+        return "Customer Information:\n"
+                + "Name: " + name + "\n"
+                + "Email: " + email + "\n"
+                + "Phone Number: " + phoneNumber
+                + "\n";
     }
 }
 

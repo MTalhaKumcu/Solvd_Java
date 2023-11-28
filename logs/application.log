@@ -1,0 +1,4 @@
+10:16:21.987 [main] INFO  com.solvd.laba.block1.task2.block1.task2.Node.Main - Continue with the selected option: 3
+10:38:29.119 [main] INFO  com.solvd.laba.block1.task2.block1.task2.Node.Main - Continue with the selected option: 4
+11:54:57.107 [main] ERROR com.solvd.laba.block1.task2.block1.task2.ComputerRepair - There is no item: Does not start
+17:38:52.444 [main] ERROR com.solvd.laba.block1.task2.block1.task2.ComputerRepair - No such diagnose: Does not start

@@ -1,6 +1,7 @@
 package com.solvd.laba.block1.task2.block1.task2;
 
 import com.solvd.laba.block1.task2.block1.task2.interfaces.IComputerController;
+import com.solvd.laba.block1.task2.block1.task2.exceptions.InvalidComputerValidationException;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -80,13 +81,13 @@ public class Computer implements IComputerController {
 
     public static String validateYearOfComputer(String year) {
         if (!year.matches("\\d+")) {
-            throw new IllegalArgumentException("Year must only contain numbers");
+            throw new InvalidComputerValidationException("Year must only contain numbers");
         }
         if (year.length() != 4) {
-            throw new IllegalArgumentException("Invalid Year length. It must contain exactly 4 digits.");
+            throw new InvalidComputerValidationException("Invalid Year length. It must contain exactly 4 digits.");
         }
         if (!year.startsWith("20")) {
-                throw new IllegalArgumentException("Year cannot start with 20.");
+                throw new InvalidComputerValidationException("Year cannot start with 20.");
         }
 
         return year;

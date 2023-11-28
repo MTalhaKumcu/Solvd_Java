@@ -6,6 +6,7 @@ public abstract class KumcuRepairService {
     private Customer customer;
     private DiagnosticReport report;
     private PaymentDepartment payment;
+
     protected Scanner scan;
 
     public KumcuRepairService() {

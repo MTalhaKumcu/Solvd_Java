@@ -3,20 +3,45 @@ package com.solvd.laba.block1.task2.block1.task2;
 import com.solvd.laba.block1.task2.block1.task2.exceptions.ValueNotFoundException;
 import com.solvd.laba.block1.task2.block1.task2.interfaces.IDiagnoseController;
 import com.solvd.laba.block1.task2.block1.task2.interfaces.IIssueController;
+import com.solvd.laba.block1.task2.block1.task2.interfaces.ICustomerController;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.core.Logger;
 
+import java.text.DateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
 import java.util.Map;
 
 
 public class ComputerRepair extends KumcuRepairService implements IDiagnoseController, IIssueController {
-   private static final Logger logger = LogManager.getLogger(ComputerRepair.class);
+    private static final Logger logger = (Logger) LogManager.getLogger(ComputerRepair.class);
 
-    private com.solvd.laba.block1.task2.block1.task2.interfaces.ICustomerController ICustomerController;
-    DiagnosticReport report = new DiagnosticReport();
+    private ICustomerController ICustomerController;
+    public DiagnosticReport report = new DiagnosticReport();
     Map<Integer, String> issues = new HashMap<>();
     Map<String, Integer> diagnoseCostMap = new HashMap<>();
+    private KumcuRepairService serviceRequest;
+
+    public Appointment appointment;
+
+    public KumcuRepairService getServiceRequest() {
+        return serviceRequest;
+    }
 
 
+    public void setServiceRequest(KumcuRepairService serviceRequest) {
+        this.serviceRequest = serviceRequest;
+    }
+
+    public Appointment getAppointment() {
+        return appointment;
+    }
+
+    public void setAppointment(Appointment appointment) {
+
+        this.appointment = appointment;
+    }
 
     @Override
     public int greetCustomer() {
@@ -36,25 +61,25 @@ public class ComputerRepair extends KumcuRepairService implements IDiagnoseContr
     public int issueWithDevice() {
         getIssue();
         System.out.println("Please Select the Issue.");
-        for (int i = 1; i <= issues.keySet().size(); i++){
+        for (int i = 1; i <= issues.keySet().size(); i++) {
             System.out.println(i + " " + issues.get(i));
         }
         int option = scan.nextInt();
+
         String issue = issues.get(option);
         String diagnosis = getDiagnose(issue);
-        double cost = getCost(diagnosis);
+
 
         report.setIssue(issue);
-        report.setRepairCost(cost);
         report.setDiagnosis(diagnosis);
 
-        System.out.println(report);
 
-        System.out.println("Please select an option");
+        System.out.println("Please select an option\n 1 - Invoice");
 
         return scan.nextInt();
 
     }
+
 
     public void getIssue() {
         this.issues.put(1, "Overheat");
@@ -62,9 +87,9 @@ public class ComputerRepair extends KumcuRepairService implements IDiagnoseContr
         this.issues.put(3, "Does not start");
     }
 
-    public String getDiagnose(String issue){
+    public String getDiagnose(String issue) {
         String diagnose;
-        switch (issue){
+        switch (issue) {
             case "Overheat":
                 diagnose = "need to change cable";
                 break;
@@ -72,18 +97,31 @@ public class ComputerRepair extends KumcuRepairService implements IDiagnoseContr
                 diagnose = "need to change screen";
                 break;
             case "Does not start":
-                diagnose = "need to change power button";
+                diagnose = diagnoseFailCase(issue);
                 break;
             default:
                 throw new ValueNotFoundException("No such issue");
-
         }
         return diagnose;
     }
 
-    public double getCost(String diagnose){
+
+    public String diagnoseFailCase(String issue) {
+
+        if (issue.contains("Does not start")) {
+            LocalDateTime currentDateTime = LocalDateTime.now();
+            LocalDateTime newDateTime = currentDateTime.plusDays(2);
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
+            String formattedDate = newDateTime.format(formatter);
+            System.out.println("There is no item. Your appointment date is : " + formattedDate + " deneme");
+        }
+        return issue;
+    }
+
+
+    public double getCost(String diagnose) {
         double cost;
-        switch (diagnose){
+        switch (diagnose) {
             case "need to change cable":
                 cost = 50;
                 break;
@@ -103,6 +141,5 @@ public class ComputerRepair extends KumcuRepairService implements IDiagnoseContr
     public Customer getCustomer() {
         return ICustomerController.getCustomer();
     }
-
 
 }

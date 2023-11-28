@@ -1,16 +1,23 @@
 package com.solvd.laba.block1.task2.block1.task2;
 
+import java.time.LocalDateTime;
+
+import java.time.format.DateTimeFormatter;
+
+
 public class Appointment {
+
     private String date;
     private String time;
     private Customer customer;
     private KumcuRepairService serviceRequest;
 
-    public Appointment(String date, String time, Customer customer, KumcuRepairService serviceRequest) {
+
+    public Appointment(String date, Customer customer, KumcuRepairService serviceRequest) {
         this.date = date;
-        this.time = time;
         this.customer = customer;
         this.serviceRequest = serviceRequest;
+
     }
 
     public String getDate() {
@@ -45,4 +52,14 @@ public class Appointment {
         this.serviceRequest = serviceRequest;
     }
 
+
+    @Override
+    public String toString() {
+        return "Appointment{" +
+                "date='" + date + '\'' +
+                ", time='" + time + '\'' +
+                ", customer=" + customer.toString() +
+                ", serviceRequest=" + serviceRequest.toString() +
+                '}';
+    }
 }

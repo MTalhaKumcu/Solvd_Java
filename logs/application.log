@@ -16,3 +16,16 @@
 12:19:36 [main] WARN  ComputerRepair - Issue: Overheat
 12:19:36 [main] WARN  ComputerRepair - Diagnosis: need to change cable
 12:19:36 [main] INFO  ComputerRepair - Cost: 50.0
+12:29:10 [main] INFO  ComputerRepair - Issue: Overheat
+12:29:10 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+12:31:19 [main] INFO  ComputerRepair - Issue: Does not start
+12:31:19 [main] INFO  ComputerRepair - Diagnosis: Does not start
+12:31:40 [main] INFO  ComputerRepair - Issue: Overheat
+12:31:40 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+12:31:40 [main] INFO  ComputerRepair - Cost: 50.0
+12:38:17 [main] INFO  ComputerRepair - Issue: Overheat
+12:38:17 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+12:38:17 [main] INFO  ComputerRepair - Cost: 50.0
+13:10:57 [main] INFO  ComputerRepair - Issue: Overheat
+13:10:57 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+13:10:57 [main] INFO  ComputerRepair - Cost: 50.0

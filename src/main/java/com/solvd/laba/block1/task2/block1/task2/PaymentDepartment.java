@@ -1,4 +1,5 @@
 package com.solvd.laba.block1.task2.block1.task2;
+import com.solvd.laba.block1.task2.block1.task2.exceptions.InvalidPaymentException;
 
 public class PaymentDepartment extends KumcuRepairService {
     private Invoice invoice;
@@ -36,7 +37,7 @@ public class PaymentDepartment extends KumcuRepairService {
                         + this.amount);
                 break;
             default:
-                System.out.println("Invalid payment option.");
+                throw new InvalidPaymentException ("Invalid payment option.");
         }
 
         return option;

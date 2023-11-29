@@ -52,14 +52,4 @@ public class Appointment {
         this.serviceRequest = serviceRequest;
     }
 
-
-    @Override
-    public String toString() {
-        return "Appointment{" +
-                "date='" + date + '\'' +
-                ", time='" + time + '\'' +
-                ", customer=" + customer.toString() +
-                ", serviceRequest=" + serviceRequest.toString() +
-                '}';
-    }
 }

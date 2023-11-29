@@ -78,16 +78,11 @@ public class ComputerRepair extends KumcuRepairService implements IDiagnoseContr
 
         String issue = issues.get(option);
         String diagnosis = getDiagnose(issue);
-        double cost = getCost(diagnosis);
 
-        // report.setIssue(issue);
-        //report.setDiagnosis(diagnosis);
-        //set repairCost incele cikarinca fiyarlar 0 laniyor ekleyince exception veriyor
-        // report.setRepairCost(cost);
-        //System.out.println(report);
-        logger.warn("Issue: " + issue);
-        logger.warn("Diagnosis: " + diagnosis);
-        logger.info("Cost: " + cost);
+
+        logger.info("Issue: " + issue);
+        logger.info("Diagnosis: " + diagnosis);
+        logger.info("Cost: " + getCost(diagnosis));
 
         System.out.println("Please select an option\n 1 - Invoice");
 
@@ -104,18 +99,15 @@ public class ComputerRepair extends KumcuRepairService implements IDiagnoseContr
 
     public String getDiagnose(String issue) {
         String diagnose;
-        switch (issue) {
-            case "Overheat":
-                diagnose = "need to change cable";
-                break;
-            case "Broken Screen":
-                diagnose = "need to change screen";
-                break;
-            case "Does not start":
-                diagnose = diagnoseFailCase(issue);
-                break;
-            default:
-                throw new ValueNotFoundException("No such issue");
+
+        if (issue.equals("Overheat")) {
+            diagnose = "need to change cable";
+        } else if (issue.equals("Broken Screen")) {
+            diagnose = "need to change screen";
+        } else if (issue.equals("Does not start")) {
+            diagnose = diagnoseFailCase(issue);
+        } else {
+            throw new ValueNotFoundException("No such issue");
         }
         return diagnose;
     }

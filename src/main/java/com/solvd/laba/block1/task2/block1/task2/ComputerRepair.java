@@ -23,7 +23,9 @@ public class ComputerRepair extends KumcuRepairService implements IDiagnoseContr
     Map<String, Integer> diagnoseCostMap = new HashMap<>();
     private KumcuRepairService serviceRequest;
 
-    public Appointment appointment;
+    private Appointment appointment;
+
+    private QueueTicket queueTicket;
 
     public KumcuRepairService getServiceRequest() {
         return serviceRequest;
@@ -41,6 +43,14 @@ public class ComputerRepair extends KumcuRepairService implements IDiagnoseContr
     public void setAppointment(Appointment appointment) {
 
         this.appointment = appointment;
+    }
+
+    public QueueTicket getQueueTicket() {
+        return queueTicket;
+    }
+
+    public void setQueueTicket(QueueTicket queueTicket) {
+        this.queueTicket = queueTicket;
     }
 
     @Override
@@ -68,11 +78,16 @@ public class ComputerRepair extends KumcuRepairService implements IDiagnoseContr
 
         String issue = issues.get(option);
         String diagnosis = getDiagnose(issue);
+        double cost = getCost(diagnosis);
 
-
-        report.setIssue(issue);
-        report.setDiagnosis(diagnosis);
-
+        // report.setIssue(issue);
+        //report.setDiagnosis(diagnosis);
+        //set repairCost incele cikarinca fiyarlar 0 laniyor ekleyince exception veriyor
+        // report.setRepairCost(cost);
+        //System.out.println(report);
+        logger.warn("Issue: " + issue);
+        logger.warn("Diagnosis: " + diagnosis);
+        logger.info("Cost: " + cost);
 
         System.out.println("Please select an option\n 1 - Invoice");
 
@@ -113,11 +128,19 @@ public class ComputerRepair extends KumcuRepairService implements IDiagnoseContr
             LocalDateTime newDateTime = currentDateTime.plusDays(2);
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm");
             String formattedDate = newDateTime.format(formatter);
-            System.out.println("There is no item. Your appointment date is : " + formattedDate + " deneme");
+            System.out.println("There is no item. Your appointment date is : " + formattedDate);
         }
         return issue;
     }
 
+    public int queueTicket(int tickets, String issue) {
+        if (!issue.equals(diagnoseFailCase(issue))) {
+            queueTicket.getCustomerQueueTicketPrint();
+        }
+
+        return tickets;
+
+    }
 
     public double getCost(String diagnose) {
         double cost;
@@ -141,5 +164,6 @@ public class ComputerRepair extends KumcuRepairService implements IDiagnoseContr
     public Customer getCustomer() {
         return ICustomerController.getCustomer();
     }
+
 
 }

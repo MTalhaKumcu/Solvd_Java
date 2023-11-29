@@ -2,3 +2,17 @@
 10:38:29.119 [main] INFO  com.solvd.laba.block1.task2.block1.task2.Node.Main - Continue with the selected option: 4
 11:54:57.107 [main] ERROR com.solvd.laba.block1.task2.block1.task2.ComputerRepair - There is no item: Does not start
 17:38:52.444 [main] ERROR com.solvd.laba.block1.task2.block1.task2.ComputerRepair - No such diagnose: Does not start
+12:12:52.366 [main] WARN  com.solvd.laba.block1.task2.block1.task2.ComputerRepair - Issue: Overheat
+12:12:52.368 [main] WARN  com.solvd.laba.block1.task2.block1.task2.ComputerRepair - diagnosis: need to change cable
+12:15:17.072 [main] WARN  com.solvd.laba.block1.task2.block1.task2.ComputerRepair - Issue: Overheat
+12:15:17.074 [main] WARN  com.solvd.laba.block1.task2.block1.task2.ComputerRepair - Diagnosis: need to change cable
+12:15:17.075 [main] INFO  com.solvd.laba.block1.task2.block1.task2.ComputerRepair - Cost: 50.0
+12:15:58.485 [main] WARN  com.solvd.laba.block1.task2.block1.task2.ComputerRepair - Issue: Overheat
+12:15:58.487 [main] WARN  com.solvd.laba.block1.task2.block1.task2.ComputerRepair - Diagnosis: need to change cable
+12:15:58.488 [main] INFO  com.solvd.laba.block1.task2.block1.task2.ComputerRepair - Cost: 50.0
+12:18:59.375 [main] WARN  ComputerRepair - Issue: Overheat
+12:18:59.376 [main] WARN  ComputerRepair - Diagnosis: need to change cable
+12:18:59.377 [main] INFO  ComputerRepair - Cost: 50.0
+12:19:36 [main] WARN  ComputerRepair - Issue: Overheat
+12:19:36 [main] WARN  ComputerRepair - Diagnosis: need to change cable
+12:19:36 [main] INFO  ComputerRepair - Cost: 50.0

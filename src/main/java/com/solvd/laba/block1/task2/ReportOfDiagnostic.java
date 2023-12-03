@@ -1,6 +1,8 @@
 package com.solvd.laba.block1.task2;
 
-public class ReportOfDiagnostic {
+import com.solvd.laba.block1.task2.Interfaces.IDignoseControl;
+
+public class ReportOfDiagnostic implements IDignoseControl {
     private String issue;
     private String diagnoses;
     private double repairCost;
@@ -30,10 +32,12 @@ public class ReportOfDiagnostic {
     }
 
     @Override
-    public String toString() {
+    public String  getReportOfDiagnostic(String ReportOfDiagnosticalue) {
         return "ReportOfDiagnostic= " + "\n" +
                 "issue= " + issue + "\n" +
                 "diagnoses= " + diagnoses + "\n" +
                 "repairCost= " + repairCost;
     }
+
+  
 }

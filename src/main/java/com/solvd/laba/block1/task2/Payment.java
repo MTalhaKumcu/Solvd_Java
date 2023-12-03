@@ -19,7 +19,7 @@ public class Payment {
     public Payment(double repairCost, String diagnosis) {
         this.invoice = new Invoice();
         invoice.setAmount(repairCost);
-        invoice.setCurrency("PLN ");
+        invoice.setCurrency(" PLN ");
         invoice.setServiceInfo(ServiceInfo.getAddress());
 
         System.out.println(ServiceInfo.getAddress());

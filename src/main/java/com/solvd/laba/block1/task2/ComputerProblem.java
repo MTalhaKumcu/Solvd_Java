@@ -1,5 +1,6 @@
 package com.solvd.laba.block1.task2;
 
+import com.solvd.laba.block1.task2.Exceptions.CustomerExitException;
 import com.solvd.laba.block1.task2.Exceptions.DiagnoseDoesNotFound;
 import com.solvd.laba.block1.task2.Interfaces.IComputerInfo;
 import org.apache.logging.log4j.LogManager;
@@ -60,19 +61,19 @@ public class ComputerProblem extends ComputerOptionScan implements IComputerInfo
         String selectedIssue = issues.get(option);
         String diagnoses = getDiagnoses(selectedIssue);
         this.diagnoses = diagnoses;
-        getRepairCost(diagnoses, selectedIssue);
+        getRepairCost(diagnoses);
 
         logger.info("issue: " + selectedIssue);
         logger.info("Diagnose: " + diagnoses);
         logger.info("ticket number: " + QueueTicket.getQueueTicket());
+        logger.info("Cost: " + getRepairCost());
 
-        //  logger.info("Cost: " + cost);
         System.out.println("Please push 1 to get invoce ");
 
         return scan.nextInt();
     }
 
-    public  String getDiagnoses(String issue) {
+    public String getDiagnoses(String issue) {
         String diagnose;
         switch (issue) {
             case "Overheat":
@@ -102,30 +103,46 @@ public class ComputerProblem extends ComputerOptionScan implements IComputerInfo
         this.issues.put(3, "Computer Power Does not work");
     }
 
-    public void getRepairCost(String diagnoses, String selectedIssue) {
+    public void getRepairCost(String diagnoses) {
 
-        if (diagnoses.equals(getDiagnoses(selectedIssue))) {
-            this.repairCost = 50.00;
+        switch (diagnoses) {
+            case "need to change cable":
+                this.repairCost = 50.00;
+                break;
+            case "need to change screen":
+                this.repairCost = 75.00;
+                break;
 
-        } else if (diagnoses.equals(getDiagnoses(selectedIssue))) {
-            this.repairCost = 75.00;
-
-        } else if (diagnoses.equals(getDiagnoses(selectedIssue))) {
-            this.repairCost = 100.00;
+            default:
+                break;
         }
     }
 
     public int processOption() {
         System.out.println("Welcome to our service. Please Select an option:");
         System.out.println("1 - Diagnose Problem  \nQ - Quit System");
-        int option = scan.nextInt();
-        switch (option) {
-            case 1:
-                return chooseComputerIssue();
-            default:
-                break;
+        try {
+            if (scan.hasNextInt()) {
+                int option = scan.nextInt();
+                if (option == 1) {
+                    return chooseComputerIssue();
+                } else {
+                    return option;
+                }
+            } else {
+                String customerDecision = scan.next().toUpperCase();
+                if (customerDecision.equals("Q")) {
+                    logger.info("Goodbye! Come Again!");
+                } else {
+                    logger.info("Continue with the selected option: " + customerDecision);
+                }
+                return 0; // Return 0 or another appropriate value based on your logic
+            }
+        } catch (CustomerExitException e) {
+            logger.error("Invalid input! Please enter a valid option.");
+            scan.next(); // Consume the invalid input
+            return 0; // Return 0 or another appropriate value based on your logic
         }
-        return option;
     }
 
 

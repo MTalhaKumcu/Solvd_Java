@@ -17,7 +17,7 @@ public class Main {
         {
             Payment payment = new Payment(service.getRepairCost(), service.getDiagnoses());
             payment.paymentOption(payment.getInvoice());
-        } else if (Character.toUpperCase((char) customerDesicion) == 'Q') {
+        } else if (Character.toUpperCase((char) customerDesicion) == 'Q' ) {
             logger.info("Goodbye Come Again!");
         }else{
             logger.info("Continue with the selected option: " + customerDesicion);

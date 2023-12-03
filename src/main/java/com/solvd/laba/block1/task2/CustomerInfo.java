@@ -70,20 +70,20 @@ public class CustomerInfo implements ICustomerInfo {
         int remainingEmailTries = MAX_TRIES;
         int remainingPhoneNumberTries = MAX_TRIES;
 
-        while (remainingNameTries >= 1 || remainingEmailTries >= 1 || remainingPhoneNumberTries >= 1) {
+        while (remainingNameTries >=0 || remainingEmailTries >= 0 || remainingPhoneNumberTries >= 0) {
 
             try {
-                if (remainingNameTries >= 1) {
+                if (remainingNameTries >= 0) {
                     System.out.println("Enter Customer Name Surname:");
                     name = validateName(ConsoleHelper.readLine());
                     remainingNameTries--;
                 }
-                if (remainingEmailTries >= 1) {
+                if (remainingEmailTries >= 0) {
                     System.out.println("Enter Customer Email:");
                     email = validateEmail(ConsoleHelper.readLine());
                     remainingEmailTries--;
                 }
-                if (remainingPhoneNumberTries >= 1) {
+                if (remainingPhoneNumberTries >= 0) {
                     System.out.println("Enter Customer Phone Number:");
                     phoneNumber = ValidatePhomeNumber(ConsoleHelper.readLine());
                     remainingPhoneNumberTries--;
@@ -94,22 +94,22 @@ public class CustomerInfo implements ICustomerInfo {
             } catch (CustomerValidationException e) {
                 System.out.println("Invalid input: " + e.getMessage());
                 if (e.getMessage().contains("Name")) {
-                    if (remainingNameTries >= 1) {
+                    if (remainingNameTries >= 0) {
                         System.out.println("You have " + remainingNameTries + " attempts remaining for Name Surname.");
                         remainingNameTries--;
                     }
                 } else if (e.getMessage().contains("Email")) {
-                    if (remainingEmailTries >= 1) {
+                    if (remainingEmailTries >= 0) {
                         System.out.println("You have " + remainingEmailTries + " attempts remaining for Email.");
                         remainingEmailTries--;
                     }
                 } else if (e.getMessage().contains("Number")) {
-                    if (remainingPhoneNumberTries >= 1) {
+                    if (remainingPhoneNumberTries >= 0) {
                         System.out.println("You have " + remainingPhoneNumberTries + " attempts remaining for Phone Number.");
                         remainingPhoneNumberTries--;
                     }
                 }
-                if (remainingNameTries == 0 || remainingEmailTries == 0 || remainingPhoneNumberTries == 0) {
+                if (remainingNameTries == -1 || remainingEmailTries == -1  || remainingPhoneNumberTries == -1 ) {
                     System.out.println("Too many invalid attempts. Exiting the application.");
                     System.exit(1);
                 }

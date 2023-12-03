@@ -3,9 +3,10 @@ package com.solvd.laba.block1.task2;
 
 import com.solvd.laba.block1.task2.Exceptions.PaymentValidationException;
 
+
 import java.util.Scanner;
 
-public class Payment {
+public class Payment{
     Scanner scan = new Scanner(System.in);
     private ComputerInfo computerInfo;
     private Invoice invoice;

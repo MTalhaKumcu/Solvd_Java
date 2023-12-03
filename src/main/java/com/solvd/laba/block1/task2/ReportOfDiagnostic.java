@@ -1,8 +1,8 @@
 package com.solvd.laba.block1.task2;
 
-import com.solvd.laba.block1.task2.Interfaces.IDignoseControl;
+import com.solvd.laba.block1.task2.Interfaces.IDignoseController;
 
-public class ReportOfDiagnostic implements IDignoseControl {
+public class ReportOfDiagnostic implements IDignoseController {
     private String issue;
     private String diagnoses;
     private double repairCost;

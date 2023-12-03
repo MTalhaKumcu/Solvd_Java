@@ -1,7 +1,9 @@
 package com.solvd.laba.block1.task2;
 
 
-public class Invoice {
+import com.solvd.laba.block1.task2.Interfaces.IInvoiceGetBill;
+
+public class Invoice  implements IInvoiceGetBill {
     private String serviceInfo;
     private String currency;
     private double amount;

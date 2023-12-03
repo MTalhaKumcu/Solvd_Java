@@ -49,6 +49,9 @@ public class ComputerProblem extends ComputerOptionScan implements IComputerInfo
     public String getDiagnoses() {
         return diagnoses;
     }
+    public void setDiagnoses(String diagnoses) {
+        this.diagnoses = diagnoses;
+    }
 
     public int chooseComputerIssue() {
         getIssue();
@@ -93,9 +96,7 @@ public class ComputerProblem extends ComputerOptionScan implements IComputerInfo
         return diagnose;
     }
 
-    public void setDiagnoses(String diagnoses) {
-        this.diagnoses = diagnoses;
-    }
+
 
     public void getIssue() {
         this.issues.put(1, "Overheat");

@@ -11,11 +11,6 @@ public class ScheduleAppointmentForCustomer {
     public ScheduleAppointmentForCustomer() {
     }
 
-    public ScheduleAppointmentForCustomer(String date, String time) {
-        this.date = date;
-        this.time = time;
-    }
-
     public String getDate() {
         return date;
     }

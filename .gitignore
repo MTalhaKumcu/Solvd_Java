@@ -1,7 +1,7 @@
 /.idea
 /target
 /logs
-
+/.Solvd_Java.iml
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/

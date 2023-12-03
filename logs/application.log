@@ -29,3 +29,60 @@
 13:10:57 [main] INFO  ComputerRepair - Issue: Overheat
 13:10:57 [main] INFO  ComputerRepair - Diagnosis: need to change cable
 13:10:57 [main] INFO  ComputerRepair - Cost: 50.0
+13:32:07 [main] INFO  ComputerRepair - Issue: Overheat
+13:32:07 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+13:32:07 [main] INFO  ComputerRepair - Cost: 50.0
+13:32:43 [main] INFO  ComputerRepair - Issue: Overheat
+13:32:43 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+13:32:43 [main] INFO  ComputerRepair - Cost: 50.0
+13:33:54 [main] INFO  ComputerRepair - Issue: Overheat
+13:33:54 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+13:33:54 [main] INFO  ComputerRepair - Cost: 50.0
+13:36:41 [main] INFO  ComputerRepair - Issue: Overheat
+13:36:41 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+13:36:41 [main] INFO  ComputerRepair - Cost: 50.0
+13:38:16 [main] INFO  ComputerRepair - Issue: Overheat
+13:38:16 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+13:38:16 [main] INFO  ComputerRepair - Cost: 50.0
+13:58:22 [main] INFO  ComputerRepair - Issue: Overheat
+13:58:22 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+13:58:22 [main] INFO  ComputerRepair - Cost: 50.0
+14:00:41 [main] INFO  ComputerRepair - Issue: Overheat
+14:00:41 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+14:00:41 [main] INFO  ComputerRepair - Cost: 50.0
+15:08:06 [main] INFO  ComputerRepair - Issue: Overheat
+15:08:06 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+15:08:06 [main] INFO  ComputerRepair - Cost: 50.0
+15:10:55 [main] INFO  ComputerRepair - Issue: Overheat
+15:10:55 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+15:10:55 [main] INFO  ComputerRepair - Cost: 50.0
+16:07:41 [main] INFO  ComputerRepair - Issue: Overheat
+16:07:41 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+16:07:41 [main] INFO  ComputerRepair - Cost: 50.0
+16:07:51 [main] INFO  ComputerRepair - Issue: Overheat
+16:07:51 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+16:07:51 [main] INFO  ComputerRepair - Cost: 50.0
+16:14:01 [main] INFO  ComputerRepair - Issue: Broken Screen
+16:14:01 [main] INFO  ComputerRepair - Diagnosis: need to change screen
+16:14:01 [main] INFO  ComputerRepair - Cost: 75.0
+16:14:06 [main] INFO  ComputerRepair - Issue: Overheat
+16:14:06 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+16:14:06 [main] INFO  ComputerRepair - Cost: 50.0
+16:15:00 [main] INFO  ComputerRepair - Issue: Overheat
+16:15:00 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+16:15:00 [main] INFO  ComputerRepair - Cost: 50.0
+16:15:05 [main] INFO  ComputerRepair - Issue: Overheat
+16:15:05 [main] INFO  ComputerRepair - Diagnosis: need to change cable
+16:15:05 [main] INFO  ComputerRepair - Cost: 50.0
+16:56:52 [main] INFO  ComputerProblem - issue: Computer Power Does not work
+16:56:52 [main] INFO  ComputerProblem - Diagnose:  need to change powersupply 
+16:56:52 [main] INFO  ComputerProblem - ticket number: 1
+16:59:06 [main] INFO  ComputerProblem - issue: Overheat
+16:59:06 [main] INFO  ComputerProblem - Diagnose: need to change cable
+16:59:06 [main] INFO  ComputerProblem - ticket number: 1
+17:00:59 [main] INFO  ComputerProblem - issue: Overheat
+17:00:59 [main] INFO  ComputerProblem - Diagnose: need to change cable
+17:00:59 [main] INFO  ComputerProblem - ticket number: 1
+17:02:17 [main] INFO  ComputerProblem - issue: Overheat
+17:02:17 [main] INFO  ComputerProblem - Diagnose: need to change cable
+17:02:17 [main] INFO  ComputerProblem - ticket number: 1

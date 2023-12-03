@@ -1,59 +1,71 @@
-package com.solvd.laba.block1.task2.block1.task2;
+package com.solvd.laba.block1.task2;
 
-import com.solvd.laba.block1.task2.block1.task2.exceptions.CustomerValidationException;
-import com.solvd.laba.block1.task2.block1.task2.interfaces.ICustomerController;
 
+import com.solvd.laba.block1.task2.Exceptions.CustomerValidationException;
+import com.solvd.laba.block1.task2.Interfaces.ICustomerInfo;
+
+import java.util.HashSet;
 import java.util.Scanner;
 
+public class CustomerInfo implements ICustomerInfo {
+    private String customerName;
+    private String customerNumber;
+    private String customerEmail;
 
-public class Customer implements ICustomerController {
+    private HashSet<QueueTicket> tickets;
 
-    private String name;
-    private String email;
-    private String phoneNumber;
-
-    public Customer(String name, String email, String phoneNumber) {
-        this.name = name;
-        this.email = email;
-        this.phoneNumber = phoneNumber;
+    public String getCustomerEmail() {
+        return customerEmail;
     }
 
-    public String getName() {
-        return this.name;
+    public void setCustomerEmail(String customerEmail) {
+        this.customerEmail = customerEmail;
     }
 
-    public void setName(String name) {
-        this.name = name;
+
+    public void addTicket(QueueTicket ticket) {
+        tickets.add(ticket);
     }
 
-    public String getEmail() {
-        return this.email;
+    public void removeTicket(QueueTicket ticket) {
+        tickets.remove(ticket);
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public CustomerInfo(String customerName, String customerNumber, String customerEmail) {
+        this.customerName = customerName;
+        this.customerNumber = customerNumber;
+        this.customerEmail = customerEmail;
     }
 
-    public String getPhoneNumber() {
-        return this.phoneNumber;
+    public String getCustomerName() {
+        return customerName;
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
     }
 
-    public Customer getCustomer() {
-        return this;
+    public String getCustomerNumber() {
+        return customerNumber;
+    }
+
+    public void setCustomerNumber(String customerNumber) {
+        this.customerNumber = customerNumber;
     }
 
     private static final int MAX_TRIES = 3;
+    public static class ConsoleHelper {
+        private static final Scanner scanner = new Scanner(System.in);
 
-    public static Customer getCustomerInput() {
+        public static String readLine() {
+            return scanner.next();
+        }
+    }
 
+    public static CustomerInfo getCustomerInput() {
         String name = "";
         String email = "";
         String phoneNumber = "";
-
         int remainingNameTries = MAX_TRIES;
         int remainingEmailTries = MAX_TRIES;
         int remainingPhoneNumberTries = MAX_TRIES;
@@ -73,13 +85,13 @@ public class Customer implements ICustomerController {
                 }
                 if (remainingPhoneNumberTries >= 1) {
                     System.out.println("Enter Customer Phone Number:");
-                    phoneNumber = validateNumber(ConsoleHelper.readLine());
+                    phoneNumber = ValidatePhomeNumber(ConsoleHelper.readLine());
                     remainingPhoneNumberTries--;
                 }
 
                 break;
 
-            } catch (IllegalArgumentException e) {
+            } catch (CustomerValidationException e) {
                 System.out.println("Invalid input: " + e.getMessage());
                 if (e.getMessage().contains("Name")) {
                     if (remainingNameTries >= 1) {
@@ -103,8 +115,9 @@ public class Customer implements ICustomerController {
                 }
             }
         }
-        return new Customer(name, email, phoneNumber);
+        return new CustomerInfo(name, email, phoneNumber);
     }
+
 
     private static String validateName(String name) {
         if (name.matches(".*\\d.*")) {
@@ -114,21 +127,18 @@ public class Customer implements ICustomerController {
     }
 
     private static String validateEmail(String email) {
-
         if (!email.matches("[a-zA-Z0-9]+@gmail\\.com")) {
             throw new CustomerValidationException("Invalid email format. Email must end with @gmail.com, Letters and Numbers");
         }
         return email;
     }
 
-
-    private static String validateNumber(String number) {
-
+    private static String ValidatePhomeNumber(String number) {
         if (!number.matches("\\d+")) {
             throw new CustomerValidationException("Number must only contain numbers");
         }
         if (number.length() != 9) {
-            throw new CustomerValidationException("Invalid phone number length. It must contain exactly 9 digits.");
+            throw new CustomerValidationException("Number must be 9 digits");
         }
         if (!number.matches("[1-9]\\d{8}")) {
             throw new CustomerValidationException("Number does not start 0");
@@ -136,22 +146,12 @@ public class Customer implements ICustomerController {
         return number;
     }
 
-    public static class ConsoleHelper {
-        private static final Scanner scanner = new Scanner(System.in);
-
-        public static String readLine() {
-            return scanner.nextLine();
-        }
-    }
-
     @Override
-    public String toString() {
-        return "Customer Information:\n"
-                + "Name: " + name + "\n"
-                + "Email: " + email + "\n"
-                + "Phone Number: " + phoneNumber
-                + "\n";
+    public void getCustomerInfo() {
+        System.out.println(
+                "Customer Name: " + customerName +
+                        ", Customer Number: " + customerNumber +
+                        ", Customer E-mail: " + customerEmail);
+
     }
 }
-
-

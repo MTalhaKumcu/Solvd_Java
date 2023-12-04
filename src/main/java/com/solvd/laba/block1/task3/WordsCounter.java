@@ -10,11 +10,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-public class Main {
+public class WordsCounter {
 
     public static void main(String[] args) {
-        File inputFile = new File("input.txt");
-        File outputFile = new File("output.txt");
+        File inputFile = new File("src/main/java/com/solvd/laba/block1/task3/input.txt");
+        File outputFile = new File("src/main/java/com/solvd/laba/block1/task3/output.txt");
 
         try {
             // Check if the input file exists

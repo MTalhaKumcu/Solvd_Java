@@ -16,6 +16,11 @@ public class Main {
 
         CustomerInfo customerInfo = CustomerInfo.getCustomerInput();
         ComputerInfo computerInfo = ComputerInfo.getComputerInfo();
+        ServiceTechnician technician = ServiceTechnician.getSelectInfo();
+
+        technician.selectedTechnician();
+
+
 
         ComputerProblem service = new ComputerProblem();
         int customerDesicion = service.processOption();

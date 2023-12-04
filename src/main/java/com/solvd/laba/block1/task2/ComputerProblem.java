@@ -6,6 +6,7 @@ import com.solvd.laba.block1.task2.Interfaces.IComputerInfo;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.core.Logger;
 
+import java.awt.*;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,7 +21,7 @@ public class ComputerProblem extends ComputerOptionScan implements IComputerInfo
     private QueueTicket queueTicket;
     public ScheduleAppointmentForCustomer scheduleAppointmentForCustomer =
             new ScheduleAppointmentForCustomer();
-
+    public ServiceTechnician technician = new ServiceTechnician();
 
     public ReportOfDiagnostic report = new ReportOfDiagnostic();
     Map<Integer, String> issues = new HashMap<>();
@@ -49,6 +50,7 @@ public class ComputerProblem extends ComputerOptionScan implements IComputerInfo
     public String getDiagnoses() {
         return diagnoses;
     }
+
     public void setDiagnoses(String diagnoses) {
         this.diagnoses = diagnoses;
     }
@@ -65,6 +67,7 @@ public class ComputerProblem extends ComputerOptionScan implements IComputerInfo
         String diagnoses = getDiagnoses(selectedIssue);
         this.diagnoses = diagnoses;
         getRepairCost(diagnoses);
+
 
         logger.info("issue: " + selectedIssue);
         logger.info("Diagnose: " + diagnoses);
@@ -95,7 +98,6 @@ public class ComputerProblem extends ComputerOptionScan implements IComputerInfo
         }
         return diagnose;
     }
-
 
 
     public void getIssue() {
@@ -147,14 +149,15 @@ public class ComputerProblem extends ComputerOptionScan implements IComputerInfo
     }
 
 
-    @Override
-    public String toString() {
-        return "ComputerProblem= " +
-                "Issue= " + issue + "\n" +
-                "Repaire cost= " + repairCost + "\n" +
-                "Diagnosis= " + diagnoses;
+
+        @Override
+        public String toString () {
+            return "ComputerProblem= " +
+                    "Issue= " + issue + "\n" +
+                    "Repaire cost= " + repairCost + "\n" +
+                    "Diagnosis= " + diagnoses;
+        }
+
+
     }
-
-
-}
 

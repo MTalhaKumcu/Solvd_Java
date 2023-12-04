@@ -1,39 +1,99 @@
 package com.solvd.laba.block1.task2;
 
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import com.solvd.laba.block1.task2.Exceptions.TechnicianException;
 
-public class ServiceTechnician {
+import java.util.Scanner;
 
-}
-   /* private List<String> technicians;
+public class ServiceTechnician extends ComputerOptionScan {
+    private String selection;
 
-    public void setTechnicianName(String fileReader) {
-        this.technicians = fileTechnicianReader(fileReader);
-
+    public ServiceTechnician() {
     }
 
-    private List<String> fileTechnicianReader(String fileReader) {
-        List<String> technicians = new ArrayList<>();
-        try (BufferedReader TechnicianBR = new BufferedReader(new FileReader(fileReader))) {
-            String cloumn;
-            while ((cloumn = TechnicianBR.readLine()) != null) {
-                technicians.add(cloumn);
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
+
+    public ServiceTechnician(String selection) {
+        this.selection = selection;
+    }
+
+    private static final Scanner scanner = new Scanner(System.in);
+
+
+    public static class ConsoleHelper {
+
+        public static String readLine() {
+            return scanner.next();
         }
-        var newTechs = technicians.stream().filter(elt -> elt.contains("u")).toList();
-        return technicians;
     }
 
-    public List<String> getTechniciansName() {
-        return technicians;
+    private static int MAX_TRIES = 3;
+
+    public static ServiceTechnician getSelectInfo() {
+        String selection = "";
+        while (MAX_TRIES >= 0) {
+            try {
+                if (MAX_TRIES > 0) {
+                    System.out.println("Select Technician: ");
+                    selection = validateTechnician(ConsoleHelper.readLine());
+                    MAX_TRIES--;
+                    break;
+                }
+            } catch (TechnicianException e) {
+                System.out.println("Invalid input: " + e.getMessage());
+                if (e.getMessage().contains("selection")) {
+                    if (MAX_TRIES >= 0) {
+                        System.out.println("You have " + MAX_TRIES + " attempts remaining to select technician. ");
+                        MAX_TRIES--;
+
+                    }
+                }
+                if (MAX_TRIES >= -1) {
+                    System.out.println("Too many invalid attempts. Exiting the application.");
+                    System.exit(1);
+                }
+            }
+        }
+
+        return new ServiceTechnician(selection);
     }
-    //ServiceTechnician setTechnicianName = new technicianNamer ("TechnicianList.txt");
-*/
+
+    private static String validateTechnician(String select) {
+        if (!select.matches("\\d+")) {
+            throw new TechnicianException("Invalid selection . its must be between 1-8. ");
+        }
+        if (!select.matches("[1-8]")) {
+            throw new TechnicianException("Invalid selection . its must be between 1-8. ");
+        }
+        return select;
+    }
+
+    public void selectedTechnician() {
+        System.out.println("Your technician is: ");
+
+        if (selection.contains("1")) {
+            System.out.println("Talha");
+        } else if (selection.contains("2")) {
+            System.out.println("Sergey");
+        } else if (selection.contains("3")) {
+            System.out.println("Deniz");
+        } else if (selection.contains("4")) {
+            System.out.println("Vadim");
+        } else if (selection.contains("5")) {
+            System.out.println("Alexey");
+        } else if (selection.contains("6")) {
+            System.out.println("Andrey");
+        } else if (selection.contains("7")) {
+            System.out.println("Alex");
+        } else if (selection.contains("8")) {
+            System.out.println("Michalina");
+        } else {
+            System.out.println("Invalid selection");
+        }
+
+
+    }
+}
+
+
+
 

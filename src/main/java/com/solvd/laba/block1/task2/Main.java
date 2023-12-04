@@ -1,5 +1,6 @@
 package com.solvd.laba.block1.task2;
 
+import com.solvd.laba.block1.task2.Enums.TechnicianEnum;
 import com.solvd.laba.block1.task2.Enums.WeekDaysEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,7 +12,7 @@ public class Main {
 
 
         WeekDaysEnum.writeWeekDays();
-
+        TechnicianEnum.choseTechnician();
 
         CustomerInfo customerInfo = CustomerInfo.getCustomerInput();
         ComputerInfo computerInfo = ComputerInfo.getComputerInfo();

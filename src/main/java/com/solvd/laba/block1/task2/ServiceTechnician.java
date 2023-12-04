@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ServiceTechnician {
-    private List<String> technicians;
+
+}
+   /* private List<String> technicians;
 
     public void setTechnicianName(String fileReader) {
         this.technicians = fileTechnicianReader(fileReader);
@@ -33,5 +35,5 @@ public class ServiceTechnician {
         return technicians;
     }
     //ServiceTechnician setTechnicianName = new technicianNamer ("TechnicianList.txt");
+*/
 
-}

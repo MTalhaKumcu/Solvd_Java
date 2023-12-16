@@ -2,6 +2,8 @@
 /target
 /logs
 /.Solvd_Java.iml
+/log.txt
+/report.log
 ### IntelliJ IDEA ###
 out/
 !**/src/main/**/out/
